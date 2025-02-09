@@ -1,3 +1,4 @@
+import 'empleado.dart';
 void main() {
   //ejercicio #1
   List<int> fibonacci = [];
@@ -20,5 +21,15 @@ void main() {
   //ejercicio #2
   List<int> uniqueFibonacci = fibonacci.toSet().toList();
   print(uniqueFibonacci);
+
+  //ejercicio #3
+  List<Empleado> empleados = [
+    Empleado(nombre: "Juan", puesto: "Desarrollador", salario: 3000.0),
+    Empleado(nombre: "María", puesto: "Diseñadora", salario: 2800.0),
+    Empleado(nombre: "Carlos", puesto: "Gerente", salario: 5000.0),
+  ];
+
+  print(calcularSalarioTotal(empleados));
+  print(calcularSalarioPromedio(empleados));
 
 }
